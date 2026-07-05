@@ -30,6 +30,7 @@ mindmap
 |---|---|
 | [`docs/`](./docs) | Documentación pulida y organizada por tema |
 | ↳ [`docs/que-es-mcp-analogia.md`](./docs/que-es-mcp-analogia.md) | 👉 Empieza aquí si eres nuevo en MCP |
+| ↳ [`docs/troubleshooting-mcp-filesystem-windows.md`](./docs/troubleshooting-mcp-filesystem-windows.md) | Error real resuelto: rutas con espacios en Windows |
 | [`notas/`](./notas) | Notas de investigación en bruto, ideas sueltas |
 | [`recursos/enlaces/`](./recursos/enlaces) | Enlaces externos curados, por categoría |
 | [`recursos/capturas/`](./recursos/capturas) | Capturas de pantalla relevantes (diagramas, UI) |
