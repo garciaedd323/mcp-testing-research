@@ -30,6 +30,13 @@ mindmap
 |---|---|
 | [`docs/`](./docs) | Documentación pulida y organizada por tema |
 | ↳ [`docs/que-es-mcp-analogia.md`](./docs/que-es-mcp-analogia.md) | 👉 Empieza aquí si eres nuevo en MCP |
+| ↳ [`docs/capacidades-mcp-qa.md`](./docs/capacidades-mcp-qa.md) | Resumen de las 8 capacidades de Claude + MCP en QA |
+| ↳ [`docs/auditoria-accesibilidad.md`](./docs/auditoria-accesibilidad.md) | Auditoría a11y automática con Playwright |
+| ↳ [`docs/auto-mantenimiento-flujo.md`](./docs/auto-mantenimiento-flujo.md) | Cómo se detectan y reparan tests rotos |
+| ↳ [`docs/testing-crossbrowser.md`](./docs/testing-crossbrowser.md) | Ejecución en Chrome, Firefox y Safari en paralelo |
+| ↳ [`docs/generacion-suites-estrategia.md`](./docs/generacion-suites-estrategia.md) | Estrategia de 3 niveles: smoke, regresión core, completa |
+| ↳ [`docs/analisis-reportes-serenity.md`](./docs/analisis-reportes-serenity.md) | Análisis de patrones de fallo y cobertura |
+| ↳ [`docs/generacion-datos-prueba.md`](./docs/generacion-datos-prueba.md) | Generación de datos de prueba realistas |
 | ↳ [`docs/troubleshooting-mcp-filesystem-windows.md`](./docs/troubleshooting-mcp-filesystem-windows.md) | Error real resuelto: rutas con espacios en Windows |
 | ↳ [`docs/mcp-filesystem-entre-proyectos.md`](./docs/mcp-filesystem-entre-proyectos.md) | Cómo cambiar la ruta de MCP al pasar de un proyecto a otro |
 | [`notas/`](./notas) | Notas de investigación en bruto, ideas sueltas |
