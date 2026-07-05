@@ -53,3 +53,6 @@ Después de este fix, los servidores de Google (Gmail, Drive, Calendar) aparecie
 
 ## Fuentes
 - [Claude Code CLI reference](https://code.claude.com/docs/en/cli-reference)
+
+## Relacionado
+- [Cómo funciona MCP filesystem al cambiar entre proyectos](./mcp-filesystem-entre-proyectos.md)
