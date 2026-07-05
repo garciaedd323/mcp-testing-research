@@ -41,6 +41,7 @@ mindmap
 | ↳ [`docs/mcp-filesystem-entre-proyectos.md`](./docs/mcp-filesystem-entre-proyectos.md) | Cómo cambiar la ruta de MCP al pasar de un proyecto a otro |
 | [`notas/`](./notas) | Notas de investigación en bruto, ideas sueltas |
 | [`recursos/enlaces/`](./recursos/enlaces) | Enlaces externos curados, por categoría |
+| [`recursos/prompts/prompts-mcp.md`](./recursos/prompts/prompts-mcp.md) | 🎯 Prompts reutilizables, organizados por capacidad |
 | [`recursos/capturas/`](./recursos/capturas) | Capturas de pantalla relevantes (diagramas, UI) |
 | [`ejemplos/`](./ejemplos) | Código o configuraciones de ejemplo |
 
