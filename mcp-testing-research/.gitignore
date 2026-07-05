@@ -1,0 +1,6 @@
+# Archivos temporales
+*.tmp
+.DS_Store
+
+# Capturas sin procesar aún (opcional, si quieres una carpeta de "bandeja de entrada" que no se suba)
+# recursos/capturas/sin-procesar/
