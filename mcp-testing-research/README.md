@@ -1,12 +1,14 @@
 # MCP para Testing Automatizado
 
-> Investigación en curso sobre el Model Context Protocol (MCP) aplicado a QA y pruebas automatizadas.
+> Investigación en curso sobre el Model Context Protocol (MCP) aplicado a QA y pruebas automatizadas — web y móvil.
 
 ## 📌 ¿Qué es esto?
 
-Este repositorio recopila investigación, notas, enlaces y ejemplos sobre cómo usar **MCP + Claude** para automatizar tareas de testing: exploración web, generación de suites, mantenimiento de tests, análisis de reportes, y más.
+Este repositorio recopila investigación, notas, enlaces y prompts sobre cómo usar **MCP + Claude** para automatizar tareas de testing: exploración web, generación de suites, mantenimiento de tests, análisis de reportes, pruebas móviles, y más.
 
-## 🗺️ Mapa de capacidades
+## 🌐 Testing Web
+
+### Mapa de capacidades
 
 ```mermaid
 mindmap
@@ -24,26 +26,55 @@ mindmap
       Testing cross-browser
 ```
 
+### Documentación
+
+| Documento | Contenido |
+|---|---|
+| [`docs/web/que-es-mcp-analogia.md`](./docs/web/que-es-mcp-analogia.md) | 👉 Empieza aquí si eres nuevo en MCP |
+| [`docs/web/capacidades-mcp-qa.md`](./docs/web/capacidades-mcp-qa.md) | Resumen de las 8 capacidades de Claude + MCP en QA |
+| [`docs/web/auditoria-accesibilidad.md`](./docs/web/auditoria-accesibilidad.md) | Auditoría a11y automática con Playwright |
+| [`docs/web/auto-mantenimiento-flujo.md`](./docs/web/auto-mantenimiento-flujo.md) | Cómo se detectan y reparan tests rotos |
+| [`docs/web/testing-crossbrowser.md`](./docs/web/testing-crossbrowser.md) | Ejecución en Chrome, Firefox y Safari en paralelo |
+| [`docs/web/generacion-suites-estrategia.md`](./docs/web/generacion-suites-estrategia.md) | Estrategia de 3 niveles: smoke, regresión core, completa |
+| [`docs/web/analisis-reportes-serenity.md`](./docs/web/analisis-reportes-serenity.md) | Análisis de patrones de fallo y cobertura |
+| [`docs/web/generacion-datos-prueba.md`](./docs/web/generacion-datos-prueba.md) | Generación de datos de prueba realistas |
+| [`docs/web/troubleshooting-mcp-filesystem-windows.md`](./docs/web/troubleshooting-mcp-filesystem-windows.md) | Error real resuelto: rutas con espacios en Windows |
+| [`docs/web/mcp-filesystem-entre-proyectos.md`](./docs/web/mcp-filesystem-entre-proyectos.md) | Cómo cambiar la ruta de MCP al pasar de un proyecto a otro |
+
+**Prompts:** [`recursos/prompts/web/prompts-mcp.md`](./recursos/prompts/web/prompts-mcp.md) 🎯
+
+---
+
+## 📱 Testing Móvil
+
+> En investigación activa — Android + Windows por ahora.
+
+### Documentación
+
+| Documento | Contenido |
+|---|---|
+| [`docs/movil/instalacion-entorno-android.md`](./docs/movil/instalacion-entorno-android.md) | 👉 Empieza aquí: instalación completa del entorno (Node, JDK, Android Studio, Appium, cliente MCP) |
+
+**Prompts:** [`recursos/prompts/movil/`](./recursos/prompts/movil) *(aún vacío, se irá llenando)*
+
+---
+
 ## 📂 Estructura del repositorio
 
-| Carpeta | Qué contiene |
-|---|---|
-| [`docs/`](./docs) | Documentación pulida y organizada por tema |
-| ↳ [`docs/que-es-mcp-analogia.md`](./docs/que-es-mcp-analogia.md) | 👉 Empieza aquí si eres nuevo en MCP |
-| ↳ [`docs/capacidades-mcp-qa.md`](./docs/capacidades-mcp-qa.md) | Resumen de las 8 capacidades de Claude + MCP en QA |
-| ↳ [`docs/auditoria-accesibilidad.md`](./docs/auditoria-accesibilidad.md) | Auditoría a11y automática con Playwright |
-| ↳ [`docs/auto-mantenimiento-flujo.md`](./docs/auto-mantenimiento-flujo.md) | Cómo se detectan y reparan tests rotos |
-| ↳ [`docs/testing-crossbrowser.md`](./docs/testing-crossbrowser.md) | Ejecución en Chrome, Firefox y Safari en paralelo |
-| ↳ [`docs/generacion-suites-estrategia.md`](./docs/generacion-suites-estrategia.md) | Estrategia de 3 niveles: smoke, regresión core, completa |
-| ↳ [`docs/analisis-reportes-serenity.md`](./docs/analisis-reportes-serenity.md) | Análisis de patrones de fallo y cobertura |
-| ↳ [`docs/generacion-datos-prueba.md`](./docs/generacion-datos-prueba.md) | Generación de datos de prueba realistas |
-| ↳ [`docs/troubleshooting-mcp-filesystem-windows.md`](./docs/troubleshooting-mcp-filesystem-windows.md) | Error real resuelto: rutas con espacios en Windows |
-| ↳ [`docs/mcp-filesystem-entre-proyectos.md`](./docs/mcp-filesystem-entre-proyectos.md) | Cómo cambiar la ruta de MCP al pasar de un proyecto a otro |
-| [`notas/`](./notas) | Notas de investigación en bruto, ideas sueltas |
-| [`recursos/enlaces/`](./recursos/enlaces) | Enlaces externos curados, por categoría |
-| [`recursos/prompts/prompts-mcp.md`](./recursos/prompts/prompts-mcp.md) | 🎯 Prompts reutilizables, organizados por capacidad |
-| [`recursos/capturas/`](./recursos/capturas) | Capturas de pantalla relevantes (diagramas, UI) |
-| [`ejemplos/`](./ejemplos) | Código o configuraciones de ejemplo |
+```
+mcp-testing-research/
+├── docs/
+│   ├── web/       ← documentación de MCP para testing web
+│   └── movil/     ← documentación de MCP para testing móvil
+├── notas/         ← notas de investigación en bruto, ideas sueltas
+├── recursos/
+│   ├── enlaces/       ← enlaces externos curados, por categoría
+│   ├── prompts/
+│   │   ├── web/       ← prompts reutilizables para testing web
+│   │   └── movil/     ← prompts reutilizables para testing móvil
+│   └── capturas/      ← capturas de pantalla relevantes (diagramas, UI)
+└── ejemplos/      ← código o configuraciones de ejemplo
+```
 
 ## 🚧 Estado
 

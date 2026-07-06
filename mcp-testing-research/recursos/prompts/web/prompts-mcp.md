@@ -68,7 +68,7 @@ escenarios negativos que un usuario malicioso o descuidado
 podría ejecutar. Genera scenarios para los 5 más críticos
 ```
 
-📄 Ver también: [Capacidades de Claude + MCP en QA](../../docs/capacidades-mcp-qa.md)
+📄 Ver también: [Capacidades de Claude + MCP en QA](../../../docs/web/capacidades-mcp-qa.md)
 
 ---
 
@@ -96,7 +96,7 @@ de datos cada uno y casos de error de red/timeout.
 Etiquétalos con @full-regression
 ```
 
-📄 Ver también: [Estrategia de generación de suites: 3 niveles](../../docs/generacion-suites-estrategia.md)
+📄 Ver también: [Estrategia de generación de suites: 3 niveles](../../../docs/web/generacion-suites-estrategia.md)
 
 ---
 
@@ -161,7 +161,7 @@ Al actualizar los selectores, prioriza en este orden:
 4. Evita xpath y posiciones numéricas como //div[3]
 ```
 
-📄 Ver también: [Auto-mantenimiento de tests rotos](../../docs/auto-mantenimiento-flujo.md)
+📄 Ver también: [Auto-mantenimiento de tests rotos](../../../docs/web/auto-mantenimiento-flujo.md)
 
 ---
 
@@ -245,7 +245,7 @@ Compáralos y dime:
 Dame los flaky tests como prioridad — son los más peligrosos
 ```
 
-📄 Ver también: [Análisis de reportes Serenity con MCP](../../docs/analisis-reportes-serenity.md)
+📄 Ver también: [Análisis de reportes Serenity con MCP](../../../docs/web/analisis-reportes-serenity.md)
 
 ---
 
@@ -352,7 +352,7 @@ Genera una versión actualizada del archivo con datos frescos
 manteniendo la misma estructura y cantidad de filas
 ```
 
-📄 Ver también: [Generación de datos de prueba con MCP](../../docs/generacion-datos-prueba.md)
+📄 Ver también: [Generación de datos de prueba con MCP](../../../docs/web/generacion-datos-prueba.md)
 
 ---
 
@@ -470,7 +470,7 @@ Para cada issue crítico, muestra el HTML actual vs el HTML corregido
 Guarda el reporte en: src/test/resources/reports/accessibility-report.md
 ```
 
-📄 Ver también: [Auditoría de accesibilidad con MCP + Playwright](../../docs/auditoria-accesibilidad.md)
+📄 Ver también: [Auditoría de accesibilidad con MCP + Playwright](../../../docs/web/auditoria-accesibilidad.md)
 
 ---
 
