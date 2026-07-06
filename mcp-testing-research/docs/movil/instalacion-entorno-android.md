@@ -124,4 +124,4 @@ Se necesita el archivo `.apk` de la app a probar, o el package name si ya está 
 
 Instalar y configurar el servidor MCP de Appium, conectarlo al cliente MCP elegido, y comenzar a explorar la app para generar los flujos de prueba en lenguaje natural.
 
-> Este es el primero de una serie de pasos. Se irá documentando cada avance como una nota nueva en esta misma carpeta (`docs/movil/`).
+👉 Continúa en: [Paso 3 — Conectar el servidor MCP de Appium a Claude Desktop](./paso3-conectar-appium-claude-desktop.md)
