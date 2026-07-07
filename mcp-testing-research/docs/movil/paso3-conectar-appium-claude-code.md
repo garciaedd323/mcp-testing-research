@@ -35,6 +35,8 @@ Igual que en la versión anterior del tutorial, crear un archivo `capabilities.j
 
 > **Nota:** Si la app ya está instalada en el emulador, se puede reemplazar `"appium:app"` por `"appium:appPackage"` y `"appium:appActivity"`.
 
+> 💡 Si ya probaste estas capacidades en **Appium Inspector** y funcionaron, no puedes reutilizar esa configuración directamente — hay que crear este archivo `.json` a mano copiando el mismo contenido. Ver [Appium Inspector vs capabilities.json](./appium-inspector-vs-capabilities-json.md) para el detalle.
+
 ## 3.3 — Agregar el servidor appium-mcp a Claude Code
 
 Hay dos formas de hacerlo — elige una:
