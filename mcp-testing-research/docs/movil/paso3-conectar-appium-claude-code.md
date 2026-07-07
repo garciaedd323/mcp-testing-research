@@ -88,6 +88,8 @@ Debería aparecer algo como:
 appium-mcp: npx -y appium-mcp@latest - ✓ Connected
 ```
 
+> 💡 Si en vez de eso aparece **failed**, no entres en pánico — es un problema muy común la primera vez (relacionado con el tiempo que tarda la descarga inicial del paquete). Ver [Troubleshooting: appium-mcp aparece como failed](./troubleshooting-appium-mcp-failed.md).
+
 ## 3.5 — Confirmar que Claude reconoce las herramientas
 1. Iniciar el emulador Android desde Android Studio (o con `emulator -avd NOMBRE_AVD` en terminal)
 2. En una conversación con Claude Code, preguntar:
