@@ -6,6 +6,72 @@
 
 Este repositorio recopila investigación, notas, enlaces y prompts sobre cómo usar **MCP + Claude** para automatizar tareas de testing: exploración web, generación de suites, mantenimiento de tests, análisis de reportes, pruebas móviles, y más.
 
+---
+
+## 🚀 Instalación rápida (empieza aquí)
+
+> Configuración probada en Windows con IntelliJ IDEA + Serenity BDD.
+
+### Requisitos previos
+
+- IntelliJ IDEA (cualquier edición)
+- Node.js — verifica con `node --version` ([descargar](https://nodejs.org))
+- Java 17 o superior
+- Un proyecto Serenity BDD existente
+
+### 1 — Instalar Claude Code
+
+```bash
+npm install -g @anthropic-ai/claude-code
+claude --version
+```
+
+### 2 — Plugin en IntelliJ
+
+`Settings → Plugins → Marketplace` → buscar **"claude mcp"** → instalar **"MCP Servers for AI Assist..."** (by meanmail.dev) → reiniciar IntelliJ.
+
+> También verás `Claude Code [Beta]` en `Settings → Tools` — es la integración oficial de Anthropic, se configura automáticamente.
+
+### 3 — Agregar servidor filesystem
+
+```bash
+claude mcp add filesystem npx -- -y @modelcontextprotocol/server-filesystem "C:\ruta\a\tu\proyecto"
+```
+
+> **Windows:** Si la ruta tiene espacios, ponla siempre entre comillas dobles.
+
+### 4 — Agregar servidor Playwright
+
+```bash
+claude mcp add playwright npx -- -y @playwright/mcp@latest
+```
+
+### 5 — Verificar
+
+```bash
+claude mcp list
+```
+
+Resultado esperado:
+
+```
+filesystem: npx -y @modelcontextprotocol/server-filesystem C:\...\ProyectoWebQA - √ Connected
+playwright: npx -y @playwright/mcp@latest - √ Connected
+```
+
+### Referencia rápida de comandos
+
+| Acción | Comando |
+|--------|---------|
+| Agregar filesystem | `claude mcp add filesystem npx -- -y @modelcontextprotocol/server-filesystem "C:\ruta"` |
+| Agregar Playwright | `claude mcp add playwright npx -- -y @playwright/mcp@latest` |
+| Ver servidores | `claude mcp list` |
+| Eliminar servidor | `claude mcp remove [nombre]` |
+| Abrir Claude Code | `claude` |
+| Ver versión | `claude --version` |
+
+---
+
 ## 🌐 Testing Web
 
 ### Mapa de capacidades
@@ -61,6 +127,33 @@ mindmap
 | ↳ [`docs/movil/paso3-conectar-appium-claude-desktop.md`](./docs/movil/paso3-conectar-appium-claude-desktop.md) | ⚠️ Versión alternativa no usada (Claude Desktop) |
 
 **Prompts:** [`recursos/prompts/movil/`](./recursos/prompts/movil) *(aún vacío, se irá llenando)*
+
+---
+
+## 🛠️ Solución de problemas comunes
+
+### `filesystem: × Failed to connect`
+Rutas con espacios en Windows. Solución:
+```bash
+claude mcp remove filesystem
+claude mcp add filesystem npx -- -y @modelcontextprotocol/server-filesystem "C:\ruta\sin espacios"
+```
+
+### `MCP server filesystem already exists`
+El servidor ya está registrado con otra ruta. Elimínalo primero:
+```bash
+claude mcp remove filesystem
+claude mcp add filesystem npx -- -y @modelcontextprotocol/server-filesystem "C:\nueva\ruta"
+```
+
+### Claude dice "no tengo herramienta de navegador"
+Falta el servidor de Playwright. Agrégalo y abre una sesión nueva:
+```bash
+claude mcp add playwright npx -- -y @playwright/mcp@latest
+```
+
+### `Needs authentication` en Gmail, Drive o Calendar
+Son servidores opcionales de Google, no necesarios para QA. Para autenticarlos, ejecuta `claude` en terminal e intenta usar uno de esos servicios.
 
 ---
 
