@@ -115,7 +115,64 @@ Un uso razonable es usar el **MCP de Playwright como herramienta de exploración
 
 ---
 
-## 6. Notas de seguridad
+## 6. Cómo evitar escribir cada paso a mano: grabar y traducir a lenguaje natural
+
+Si ya tienes un proyecto con Serenity BDD + Cucumber + Screenplay + JUnit, y además integraste Claude con MCP de Playwright para que la IA navegue e inspeccione la web, el cuello de botella suele ser **escribir a mano, en lenguaje natural, cada paso del flujo**. Hay una forma de evitarlo: grabar tus acciones reales en el navegador y pedirle a Claude que traduzca esa grabación a lenguaje natural.
+
+### Opción A — Playwright Codegen (recomendada, ya usas Playwright)
+
+Playwright trae una herramienta de grabación separada del MCP:
+
+```bash
+npx playwright codegen https://tu-app.com
+```
+
+- Se abre un navegador controlado + un panel con el código generado en vivo.
+- Navegas, haces login, llenas formularios como usuario normal.
+- Al cerrar, obtienes un script (`.js`/`.ts`) con cada acción (`page.click(...)`, `page.fill(...)`, etc.) en el orden exacto en que la hiciste.
+
+**Paso clave:** en vez de escribir tú el `.md`, le pegas ese script a Claude con un pedido como:
+
+> "Convierte estos pasos de Playwright en un prompt de lenguaje natural para el agente MCP, con el mismo formato que uso en `mcp-test-prompt.md`."
+
+Claude entiende el código y devuelve la descripción en español, paso a paso, lista para revisar y ajustar.
+
+### Opción B — Chrome DevTools Recorder (sin instalar nada)
+
+1. F12 en Chrome → pestaña **Recorder** → "Start new recording".
+2. Navegas y haces tus acciones normalmente.
+3. Exportas la grabación como JSON (o como script de Puppeteer).
+4. Le pasas ese JSON a Claude con el mismo pedido: traducir a lenguaje natural para el prompt MCP.
+
+Útil si el equipo no quiere depender de la terminal para grabar.
+
+### Ventaja extra para un proyecto Screenplay
+
+Esta grabación sirve para dos cosas a la vez:
+- Genera el **prompt en lenguaje natural** para el agente MCP.
+- Contiene los **selectores reales** (ids, roles, texto) que usó la app, reutilizables directamente al escribir la `Task` de Screenplay definitiva — sin tener que volver a inspeccionar el DOM a mano.
+
+### Flujo resultante
+
+```
+Tú navegas manualmente
+        │
+        ▼
+Playwright Codegen (o DevTools Recorder)
+        │
+        ▼
+Script/JSON con cada acción grabada
+        │
+        ▼
+Le pides a Claude: "traduce esto a lenguaje natural"
+        │
+        ▼
+mcp-test-prompt.md listo, sin escribirlo a mano
+```
+
+---
+
+## 7. Notas de seguridad
 
 - El `config.json` normalmente contiene **credenciales reales** (usuario y contraseña del ambiente probado). Nunca debe subirse a un repositorio público tal cual — usar `.gitignore` para excluirlo, o reemplazar los valores sensibles por variables de entorno antes de commitear.
 - Las carpetas `screenshots/`, `results/` y `reports/` suelen excluirse del control de versiones (salvo un `.gitkeep` para mantener la estructura), ya que son artefactos generados en cada corrida.
