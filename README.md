@@ -8,6 +8,55 @@ Este repositorio recopila investigación, notas, enlaces y prompts sobre cómo u
 
 ---
 
+## 🗺️ Ruta de aprendizaje guiada
+
+Si es la primera vez que llegas a este repo, **no lo leas de arriba hacia abajo** — sigue este orden. Cada fase da por hecho que ya completaste la anterior.
+
+> 📌 **Prerequisito:** se asume que ya sabes lo básico de testing automatizado tradicional (Selenium/Cypress/Playwright/Appium). MCP no reemplaza ese conocimiento, se apoya en él.
+
+### Fase 0 — Fundamentos conceptuales (nunca te saltes esto)
+
+1. [¿Qué es MCP? (analogía)](./docs/web/que-es-mcp-analogia.md) — el punto de entrada obligatorio si nunca usaste MCP.
+2. [Mapa de capacidades de Claude + MCP en QA](./docs/web/capacidades-mcp-qa.md) — panorama completo de las 8 capacidades, para saber qué es posible antes de instalar nada.
+3. 🔒 [Seguridad al usar Claude + MCP](./docs/web/seguridad-mcp-qa.md) — léela **antes** de conectar MCP a cualquier proyecto real, no después de tener un problema.
+
+### Fase 1 — Instalación
+
+1. [Instalación rápida](#-instalación-rápida-empieza-aquí) — la sección de este mismo README, con los comandos mínimos para arrancar.
+2. [Guía completa (Serenity BDD + IntelliJ)](./docs/web/guia-mcp-qa-serenity.md) — la versión extendida, con prompts de diagnóstico inicial del proyecto.
+
+### Fase 2 — Testing Web con MCP
+
+1. [Playwright MCP vs Screenplay Pattern](./docs/web/testing-playwright-mcp-vs-screenplay.md) — entiende primero **cuándo** conviene este enfoque frente a la automatización tradicional, antes de lanzarte a usarlo en todo.
+2. [Prompts reutilizables](./recursos/prompts/web/prompts-mcp.md) 🎯 — la librería de prompts ya probados, organizados por capacidad.
+3. Troubleshooting real, consúltalos cuando te aparezca el mismo problema:
+   - [Rutas con espacios en Windows](./docs/web/troubleshooting-mcp-filesystem-windows.md)
+   - [Cambiar de proyecto (reconfigurar filesystem)](./docs/web/mcp-filesystem-entre-proyectos.md)
+4. 🏁 **Práctica integradora:** [Caso de estudio real (7 días → 3 días)](./docs/web/caso-estudio-suite-e2e-mcp.md) — la evidencia completa de qué esperar en un proyecto real, incluyendo la limitación más importante a tener en cuenta.
+
+### Fase 3 — Testing Móvil con MCP (Android)
+
+1. [Instalación del entorno Android](./docs/movil/instalacion-entorno-android.md) — Node, JDK, Android Studio, Appium, cliente MCP.
+2. [Claude Code vs Claude Desktop](./docs/movil/decision-claude-desktop-vs-code.md) — por qué se eligió Claude Code, para no repetir la misma investigación.
+3. [Conectar appium-mcp a Claude Code](./docs/movil/paso3-conectar-appium-claude-code.md) — el paso vigente.
+4. [Appium Inspector vs capabilities.json](./docs/movil/appium-inspector-vs-capabilities-json.md) — aclaración importante antes de armar tu primera sesión.
+5. Troubleshooting: [appium-mcp aparece como "failed"](./docs/movil/troubleshooting-appium-mcp-failed.md)
+
+> ⚠️ [Conectar appium-mcp a Claude Desktop](./docs/movil/paso3-conectar-appium-claude-desktop.md) es una alternativa **no usada** — se documentó por completitud, no es el camino recomendado.
+
+### Fase 4 — Capacidades por validar (🟡 conceptuales, sin ejecutar todavía)
+
+Estas seis notas describen ideas con buen potencial, pero **todavía no probadas en un proyecto real** como sí lo está el caso de estudio de la Fase 2. Si las pones en práctica, avísate a ti mismo para actualizar el indicador a 🟢 y documentar lo que encontraste (bueno o malo):
+
+- [Auditoría de accesibilidad](./docs/web/auditoria-accesibilidad.md)
+- [Auto-mantenimiento de tests rotos](./docs/web/auto-mantenimiento-flujo.md)
+- [Testing cross-browser](./docs/web/testing-crossbrowser.md)
+- [Estrategia de generación de suites](./docs/web/generacion-suites-estrategia.md)
+- [Análisis de reportes](./docs/web/analisis-reportes-serenity.md)
+- [Generación de datos de prueba](./docs/web/generacion-datos-prueba.md)
+
+---
+
 ## 🚀 Instalación rápida (empieza aquí)
 
 > Configuración probada en Windows con IntelliJ IDEA + Serenity BDD.
