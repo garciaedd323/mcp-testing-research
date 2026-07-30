@@ -230,8 +230,10 @@ mcp-testing-research/
 │   │   ├── web/       ← prompts reutilizables para testing web
 │   │   └── movil/     ← prompts reutilizables para testing móvil
 │   └── capturas/      ← capturas de pantalla relevantes (diagramas, UI)
-└── ejemplos/      ← código o configuraciones de ejemplo
+└── ejemplos/      ← código o configuraciones de ejemplo (incluye claude-md-ejemplo.md)
 ```
+
+📄 **Contenido actual de `ejemplos/`:** [`claude-md-ejemplo.md`](./ejemplos/claude-md-ejemplo.md) — plantilla real de `CLAUDE.md` (anonimizada), derivada del proyecto del [caso de estudio](./docs/web/caso-estudio-suite-e2e-mcp.md). Incluye la metodología incremental validada, advertencias reales de estructura, y el hallazgo de deuda técnica de credenciales — lista para copiar y adaptar a un proyecto propio.
 
 ## 🚧 Estado
 

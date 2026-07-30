@@ -84,6 +84,31 @@ La limitación de que Claude puede "creer" que una acción funcionó a nivel de 
 
 ---
 
+## 5. Hallazgo colateral (no es una limitación de Claude/MCP): construir el `CLAUDE.md` expuso deuda técnica no documentada
+
+Esta entrada es distinta a las anteriores — no es algo que Claude/MCP haga mal, sino **un efecto secundario positivo** del proceso de documentar contexto que vale la pena registrar igual.
+
+### Qué pasó
+
+Al reconstruir la información real para el `CLAUDE.md` de un proyecto (revisando `build.gradle`, `serenity.conf`, hooks y features directamente), salió a la luz que **las credenciales de prueba estaban hardcodeadas en código Java commiteado al repositorio** (`HooksColgasWebV2.java`, `hooksDos/hooks.java`) — algo que no estaba señalado en ninguna documentación previa del proyecto, y que conecta directamente con lo ya advertido en [seguridad-mcp-qa.md](./seguridad-mcp-qa.md).
+
+También aparecieron dos "trampas silenciosas" de estructura que nadie tenía escritas en ningún lado: un choque de mayúsculas/minúsculas entre paquetes `ui/`/`UI/` (riesgoso en Windows, sistema de archivos case-insensitive), y dos paquetes de hooks paralelos (`hooks/` vigente vs `hooksDos/` legacy) sin ninguna nota de cuál usar para código nuevo.
+
+### Por qué pasó
+
+El ejercicio de "explicarle el proyecto a Claude por escrito, de forma exhaustiva" obliga a **revisar el código con una lupa distinta** a la de simplemente trabajar en él día a día — se termina auditando cosas que, en el uso normal, se dan por sentadas o se ignoran porque "siempre han estado así".
+
+### Qué se puede hacer al respecto
+
+Aprovechar la construcción de cualquier `CLAUDE.md` como una oportunidad de auditoría ligera del proyecto, no solo como un trámite de documentación. Concretamente, en este caso:
+
+- Se documentó la deuda técnica de las credenciales directamente en el `CLAUDE.md`, con una instrucción explícita para que Claude **no perpetúe el patrón inseguro** en código nuevo (en vez de solo señalarlo y seguir igual).
+- Se documentaron las dos trampas de estructura (`ui/`/`UI/` y los dos paquetes de hooks) para que cualquier sesión futura —humana o con Claude— no vuelva a tropezar con lo mismo.
+
+> **Lección para cualquiera que construya su propio `CLAUDE.md`:** no lo llenes solo con lo que ya sabes de memoria — revisa el código fuente real (configuración, hooks, estructura de carpetas) mientras lo escribes. Es muy probable que encuentres algo que vale la pena documentar y que nadie había escrito antes.
+
+---
+
 ## Cómo agregar una limitación nueva a este catálogo
 
 1. Copiar la estructura de la sección 1 (Qué pasa / Por qué pasa / Qué se puede hacer al respecto).
