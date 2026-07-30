@@ -100,6 +100,7 @@ mindmap
 |---|---|
 | [`docs/web/que-es-mcp-analogia.md`](./docs/web/que-es-mcp-analogia.md) | 👉 Empieza aquí si eres nuevo en MCP |
 | [`docs/web/caso-estudio-suite-e2e-mcp.md`](./docs/web/caso-estudio-suite-e2e-mcp.md) | 🟢 **Caso real:** 42 pruebas E2E generadas con Claude+MCP en un proyecto de gestión comercial (Serenity/Screenplay) — metodología de exploración incremental, problemas técnicos resueltos, y la limitación clave detectada (Claude puede "creer" que un clic funcionó a nivel de código sin que el resultado sea visible en pantalla) |
+| [`docs/web/seguridad-mcp-qa.md`](./docs/web/seguridad-mcp-qa.md) | 🔒 **Léela antes de conectar MCP a un proyecto real:** credenciales, alcance del servidor `filesystem`, por qué nunca apuntar a producción, cuentas de prueba, qué "ve" realmente Claude durante una sesión, y checklist rápido previo a cada conexión |
 | [`docs/web/capacidades-mcp-qa.md`](./docs/web/capacidades-mcp-qa.md) | Resumen de las 8 capacidades de Claude + MCP en QA |
 | [`docs/web/auditoria-accesibilidad.md`](./docs/web/auditoria-accesibilidad.md) | 🟡 Conceptual — Auditoría a11y automática con Playwright |
 | [`docs/web/auto-mantenimiento-flujo.md`](./docs/web/auto-mantenimiento-flujo.md) | 🟡 Conceptual — Cómo se detectan y reparan tests rotos |
@@ -111,7 +112,7 @@ mindmap
 | [`docs/web/troubleshooting-mcp-filesystem-windows.md`](./docs/web/troubleshooting-mcp-filesystem-windows.md) | 🟢 Error real resuelto: rutas con espacios en Windows |
 | [`docs/web/mcp-filesystem-entre-proyectos.md`](./docs/web/mcp-filesystem-entre-proyectos.md) | 🟢 Cómo cambiar la ruta de MCP al pasar de un proyecto a otro |
 
-> 🟢 = validado con experiencia real · 🟡 = conceptual, pendiente de ejecutarse en un proyecto real · sin marca = análisis/comparativa
+> 🟢 = validado con experiencia real · 🟡 = conceptual, pendiente de ejecutarse en un proyecto real · 🔒 = guía de seguridad, léela antes de conectar MCP a un proyecto · sin marca = análisis/comparativa
 
 **Prompts:** [`recursos/prompts/web/prompts-mcp.md`](./recursos/prompts/web/prompts-mcp.md) 🎯
 **Enlaces curados:** [`recursos/enlaces/mcp-testing.md`](./recursos/enlaces/mcp-testing.md) *(plantilla en construcción, se irá llenando)*
