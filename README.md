@@ -99,16 +99,19 @@ mindmap
 | Documento | Contenido |
 |---|---|
 | [`docs/web/que-es-mcp-analogia.md`](./docs/web/que-es-mcp-analogia.md) | 👉 Empieza aquí si eres nuevo en MCP |
+| [`docs/web/caso-estudio-suite-e2e-mcp.md`](./docs/web/caso-estudio-suite-e2e-mcp.md) | 🟢 **Caso real:** 42 pruebas E2E generadas con Claude+MCP en un proyecto de gestión comercial (Serenity/Screenplay) — metodología de exploración incremental, problemas técnicos resueltos, y la limitación clave detectada (Claude puede "creer" que un clic funcionó a nivel de código sin que el resultado sea visible en pantalla) |
 | [`docs/web/capacidades-mcp-qa.md`](./docs/web/capacidades-mcp-qa.md) | Resumen de las 8 capacidades de Claude + MCP en QA |
-| [`docs/web/auditoria-accesibilidad.md`](./docs/web/auditoria-accesibilidad.md) | Auditoría a11y automática con Playwright |
-| [`docs/web/auto-mantenimiento-flujo.md`](./docs/web/auto-mantenimiento-flujo.md) | Cómo se detectan y reparan tests rotos |
-| [`docs/web/testing-crossbrowser.md`](./docs/web/testing-crossbrowser.md) | Ejecución en Chrome, Firefox y Safari en paralelo |
-| [`docs/web/generacion-suites-estrategia.md`](./docs/web/generacion-suites-estrategia.md) | Estrategia de 3 niveles: smoke, regresión core, completa |
-| [`docs/web/analisis-reportes-serenity.md`](./docs/web/analisis-reportes-serenity.md) | Análisis de patrones de fallo y cobertura |
-| [`docs/web/generacion-datos-prueba.md`](./docs/web/generacion-datos-prueba.md) | Generación de datos de prueba realistas |
+| [`docs/web/auditoria-accesibilidad.md`](./docs/web/auditoria-accesibilidad.md) | 🟡 Conceptual — Auditoría a11y automática con Playwright |
+| [`docs/web/auto-mantenimiento-flujo.md`](./docs/web/auto-mantenimiento-flujo.md) | 🟡 Conceptual — Cómo se detectan y reparan tests rotos |
+| [`docs/web/testing-crossbrowser.md`](./docs/web/testing-crossbrowser.md) | 🟡 Conceptual — Ejecución en Chrome, Firefox y Safari en paralelo |
+| [`docs/web/generacion-suites-estrategia.md`](./docs/web/generacion-suites-estrategia.md) | 🟡 Conceptual — Estrategia de 3 niveles: smoke, regresión core, completa |
+| [`docs/web/analisis-reportes-serenity.md`](./docs/web/analisis-reportes-serenity.md) | 🟡 Conceptual — Análisis de patrones de fallo y cobertura |
+| [`docs/web/generacion-datos-prueba.md`](./docs/web/generacion-datos-prueba.md) | 🟡 Conceptual — Generación de datos de prueba realistas |
 | [`docs/web/testing-playwright-mcp-vs-screenplay.md`](./docs/web/testing-playwright-mcp-vs-screenplay.md) | Playwright MCP (agente IA + `.md`) vs Screenplay Pattern + Cucumber + JUnit: estructura de un proyecto MCP, chat directo vs archivos versionados, comparación con automatización tradicional, y cómo combinar ambos (MCP como exploración, Screenplay como código final en CI/CD) |
-| [`docs/web/troubleshooting-mcp-filesystem-windows.md`](./docs/web/troubleshooting-mcp-filesystem-windows.md) | Error real resuelto: rutas con espacios en Windows |
-| [`docs/web/mcp-filesystem-entre-proyectos.md`](./docs/web/mcp-filesystem-entre-proyectos.md) | Cómo cambiar la ruta de MCP al pasar de un proyecto a otro |
+| [`docs/web/troubleshooting-mcp-filesystem-windows.md`](./docs/web/troubleshooting-mcp-filesystem-windows.md) | 🟢 Error real resuelto: rutas con espacios en Windows |
+| [`docs/web/mcp-filesystem-entre-proyectos.md`](./docs/web/mcp-filesystem-entre-proyectos.md) | 🟢 Cómo cambiar la ruta de MCP al pasar de un proyecto a otro |
+
+> 🟢 = validado con experiencia real · 🟡 = conceptual, pendiente de ejecutarse en un proyecto real · sin marca = análisis/comparativa
 
 **Prompts:** [`recursos/prompts/web/prompts-mcp.md`](./recursos/prompts/web/prompts-mcp.md) 🎯
 **Enlaces curados:** [`recursos/enlaces/mcp-testing.md`](./recursos/enlaces/mcp-testing.md) *(plantilla en construcción, se irá llenando)*
