@@ -70,6 +70,8 @@ playwright: npx -y @playwright/mcp@latest - √ Connected
 | Abrir Claude Code | `claude` |
 | Ver versión | `claude --version` |
 
+📖 **¿Quieres la guía completa y detallada?** — [`docs/web/guia-mcp-qa-serenity.md`](./docs/web/guia-mcp-qa-serenity.md) tiene el paso a paso extendido (agregar/eliminar servidores adicionales, prompts de diagnóstico inicial del proyecto, prompts de exploración y generación automática de tests) más allá de lo resumido arriba.
+
 ---
 
 ## 🌐 Testing Web
@@ -109,6 +111,7 @@ mindmap
 | [`docs/web/mcp-filesystem-entre-proyectos.md`](./docs/web/mcp-filesystem-entre-proyectos.md) | Cómo cambiar la ruta de MCP al pasar de un proyecto a otro |
 
 **Prompts:** [`recursos/prompts/web/prompts-mcp.md`](./recursos/prompts/web/prompts-mcp.md) 🎯
+**Enlaces curados:** [`recursos/enlaces/mcp-testing.md`](./recursos/enlaces/mcp-testing.md) *(plantilla en construcción, se irá llenando)*
 
 ---
 
@@ -178,6 +181,8 @@ mcp-testing-research/
 ## 🚧 Estado
 
 Proyecto en investigación activa. Ver [`notas/`](./notas) para el progreso más reciente.
+
+> 📝 Para agregar una nota nueva, copia [`notas/_plantilla.md`](./notas/_plantilla.md) como punto de partida (contexto, hallazgos, preguntas abiertas, fuentes).
 
 ## 📄 Licencia
 
