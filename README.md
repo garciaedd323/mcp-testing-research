@@ -99,7 +99,7 @@ mindmap
 | Documento | Contenido |
 |---|---|
 | [`docs/web/que-es-mcp-analogia.md`](./docs/web/que-es-mcp-analogia.md) | 👉 Empieza aquí si eres nuevo en MCP |
-| [`docs/web/caso-estudio-suite-e2e-mcp.md`](./docs/web/caso-estudio-suite-e2e-mcp.md) | 🟢 **Caso real:** 42 pruebas E2E generadas con Claude+MCP en un proyecto de gestión comercial (Serenity/Screenplay) — metodología de exploración incremental, problemas técnicos resueltos, y la limitación clave detectada (Claude puede "creer" que un clic funcionó a nivel de código sin que el resultado sea visible en pantalla) |
+| [`docs/web/caso-estudio-suite-e2e-mcp.md`](./docs/web/caso-estudio-suite-e2e-mcp.md) | 🟢 **Caso real (7 días → 3 días):** 42 pruebas E2E generadas con Claude+MCP en un proyecto de gestión comercial (Serenity/Screenplay) — metodología de exploración incremental, problemas técnicos resueltos, y la limitación clave detectada (Claude puede "creer" que un clic funcionó a nivel de código sin que el resultado sea visible en pantalla) |
 | [`docs/web/seguridad-mcp-qa.md`](./docs/web/seguridad-mcp-qa.md) | 🔒 **Léela antes de conectar MCP a un proyecto real:** credenciales, alcance del servidor `filesystem`, por qué nunca apuntar a producción, cuentas de prueba, qué "ve" realmente Claude durante una sesión, y checklist rápido previo a cada conexión |
 | [`docs/web/capacidades-mcp-qa.md`](./docs/web/capacidades-mcp-qa.md) | Resumen de las 8 capacidades de Claude + MCP en QA |
 | [`docs/web/auditoria-accesibilidad.md`](./docs/web/auditoria-accesibilidad.md) | 🟡 Conceptual — Auditoría a11y automática con Playwright |

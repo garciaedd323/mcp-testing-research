@@ -2,6 +2,8 @@
 
 > Documento basado en experiencia real de configuración y uso, no en un escenario teórico. Complementa el [mapa de capacidades](./capacidades-mcp-qa.md) con evidencia concreta de qué tan bien (y en qué falla) funciona este enfoque en la práctica.
 
+> **📊 Resultado clave:** ~7 días estimados escribiendo la suite a mano → ~3 días reales con Claude+MCP (reducción de más del 50% del tiempo).
+
 ---
 
 ## Contexto del proyecto
@@ -73,8 +75,8 @@ Más allá de generar código, Claude sirvió como **apoyo para entender reglas 
 | Problemas técnicos resueltos por Claude | Selectores con índices inestables, dropdowns con `div` anidados |
 | Limitación principal detectada | Diferencia entre lo que ocurre "por debajo" (DOM/eventos) y lo que se ve "por encima" (resultado visual real) |
 | Valor inesperado | Aclaración de reglas de negocio de la app, no solo generación de código |
-| Modelo de Claude usado | `[completar]` |
-| Tiempo total vs. estimado manual | `[completar]` |
+| Modelo de Claude usado | Claude Sonnet 5, vía Claude Code v2.1.220 (plan Claude Team) |
+| Tiempo total vs. estimado manual | ~3 días con Claude+MCP, vs. ~7 días estimados escribiéndolo a mano (reducción de más del 50%) |
 
 ---
 
